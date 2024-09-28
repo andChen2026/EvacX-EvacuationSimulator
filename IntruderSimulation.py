@@ -67,9 +67,6 @@ def getIsDead(victim):
             return True
     return False
 
-
-
-
 Building = [4][3]
 Building[0][0] = Block("Room", ["S"])
 Building[0][1] = Block("Room", ["S"])
