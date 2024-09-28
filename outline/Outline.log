@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.22)  28 SEP 2024 17:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.22)  28 SEP 2024 18:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -80,11 +80,11 @@ LaTeX Font Info:    ... okay on input line 11.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(54.2025pt, 489.10287pt, 54.2025pt)
+* h-part:(L,W,R)=(54.2025pt, 471.03539pt, 72.26999pt)
 * v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=489.10287pt
+* \textwidth=471.03539pt
 * \textheight=700.50687pt
 * \oddsidemargin=-18.06749pt
 * \evensidemargin=-18.06749pt
@@ -126,7 +126,7 @@ Here is how much of TeX's memory you used:
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
 /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on outline.pdf (2 pages, 48437 bytes).
+Output written on outline.pdf (2 pages, 48446 bytes).
 PDF statistics:
  26 PDF objects out of 1000 (max. 8388607)
  15 compressed objects within 1 object stream
