@@ -22,9 +22,9 @@ Members: Diana Lysova, Andrew Chen, Noah Kochavi, Conrad French
 \hspace*{6mm} This graph would consist of rooms and hallways, which would be represented as nodes. The edges within this graph represent the connections between various hallways and rooms. In addition, there are special nodes labeled "exit". These exit nodes are the destination of all victims as they would be safe upon reaching the nodes.
 \subsection*{Algorithms}
 \begin{enumerate}
-\item \textbf{A* Search} finds the shortest path from two vertices. It differs from Dijkstra's in that it does not bother calculating vertices farther from the destination. Every iteration tends to bring in vertices that are closer to the destination. \\[5pt]
-\item \textbf{Edmonds Karp} find the maximum amount of flow from a source to a sink (destination). In this context, the algorithm is finding the maximum amount of people that can be evacuated from a source to the exits.\\[5pt]
-\item \textbf{K-Means} is an unsupervised machine learning algorithms that classifies inputs based on some metrics. In this context, the metrics are the proximity from the intruder and the location of each victim. From these metrics, K-Means will generate \textit{clusters} of the danger levels of victims. The higher a danger level of a victim, the more priority the system will give to them.\\[5pt]
+\item \textbf{A* Search} finds the shortest path from two vertices. It differs from Dijkstra's in that it does not bother calculating vertices farther from the destination. Every iteration tends to bring in vertices that are closer to the destination. 
+\item \textbf{Edmonds Karp} find the maximum amount of flow from a source to a sink (destination). In this context, the algorithm is finding the maximum amount of people that can be evacuated from a source to the exits.
+\item \textbf{K-Means} is an unsupervised machine learning algorithms that classifies inputs based on some metrics. In this context, the metrics are the proximity from the intruder and the location of each victim. From these metrics, K-Means will generate \textit{clusters} of the danger levels of victims. The higher a danger level of a victim, the more priority the system will give to them.
 \item \textbf{Quad-Tree} is a tree data structure whose nodes are positions within a display. A node is only present if there is at least one item within a quadrant. In this context, only quadrants that have victims or the intruder and stored, saving memory and allowing for fast collision detection.
 \end{enumerate}
 
