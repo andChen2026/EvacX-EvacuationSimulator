@@ -11,7 +11,37 @@
 \begin{document}
 \section*{\huge Evacuation Simulation: EvacX}
 Members: Diana Lysova, Andrew Chen, Noah Kochavi, Conrad French \\ [5pt]
-\textbf{Context} \\
+\textbf{Context} \\[5pt]
 \hspace*{6mm} In our modern world, we unfortunately have to deal with many unprecedented events that may happen in our lives. From flooding in coastal cities, tornadoes in the midwest, to even the horrible intruder threats in our schools. In many cases, local governments have been caught off-guard, with many not even mounting a proper response until hours later. Denizens of affected or at risk communities may wonder, "is there anything that can be done?" \\[5pt]
 \hspace*{6mm} Our group says that there is. EvacX is a simulator that will be able to mount a much better response than past measures. In this project, we will use active intruder threats as an example to display the suite of functionality EvacX is capable of. Although, EvacX should ideally be able to mount a response against a variety of threats.
+\section*{Phase I}
+The main goals of this phase consist of:
+\begin{enumerate}
+\item Create a GitHub Repository \& Invite all group members
+\item Read \& Learn Godot \& GDScript and create a project
+\item Load in assets needed for the simulator
+\item Investigate the Algorithms required for the simulation
+	\begin{itemize}
+	\item Collision Detection: 
+		\begin{itemize}
+		\item Spatial Hashing: Using a Hash-Table to map collisions 
+		such that multiple items within a bucket means collision
+		\item Quadtrees: A tree data structure where each root quadrant 			points to 4 inner child quadrants
+		\end{itemize}
+	\item Network Flow:
+		\begin{itemize}
+		\item Edmonds-Karp: Maximum Flow from source to a sink
+		\end{itemize}
+	\item Traversal:
+		\begin{itemize}
+		\item Breadth-First Search
+		\item Depth-First Search
+		\end{itemize}
+	\item Shortest-Path
+		\begin{itemize}
+		\item Dijkstra's: Shortest Path to every vertex
+		\item A* Search: Shortest Path with an emphasis in a direction
+		\end{itemize}
+	\end{itemize}
+\end{enumerate}
 \end{document}
