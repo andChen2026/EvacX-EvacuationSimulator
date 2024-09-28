@@ -1,3 +1,3 @@
 # SteelMinMaxxers
-- Conrad F, Noah K, Andrew C, Diana L
+- Conrad French, Noah K, Andrew C, Diana L
 - SteelHacks 2024
