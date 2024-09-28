@@ -10,10 +10,24 @@
 
 \begin{document}
 \section*{\huge Evacuation Simulation: EvacX}
-Members: Diana Lysova, Andrew Chen, Noah Kochavi, Conrad French \\ [5pt]
-\textbf{Context} \\[5pt]
+Members: Diana Lysova, Andrew Chen, Noah Kochavi, Conrad French 
+\subsection*{Context} 
 \hspace*{6mm} In our modern world, we unfortunately have to deal with many unprecedented events that may happen in our lives. From flooding in coastal cities, tornadoes in the midwest, to even the horrible intruder threats in our schools. In many cases, local governments have been caught off-guard, with many not even mounting a proper response until hours later. Denizens of affected or at risk communities may wonder, "is there anything that can be done?" \\[5pt]
 \hspace*{6mm} Our group says that there is. EvacX is a simulator that will be able to mount a much better response than past measures. In this project, we will use active intruder threats as an example to display the suite of functionality EvacX is capable of. Although, EvacX should ideally be able to mount a response against a variety of threats.
+\subsection*{Goal}
+\hspace*{6mm} The goal of the simulation is to guide as many victims to the exit nodes as possible. Intruders will be present and will try to eliminate as many victims as possible, so it is important for the system to make the best decisions in both the short and long term.\\[5pt]
+\hspace*{6mm} To achieve this we will be using several graph algorithms as well as levels of optimization to allow the system to run in an efficient and timely manner
+\subsection*{Floor-Plan}
+\hspace*{6mm} To represent the floor-plan of the establishment we were running the simulation in, we decided on a \textbf{Weighted Di-Graph}. \\[5pt]
+\hspace*{6mm} This graph would consist of rooms and hallways, which would be represented as nodes. The edges within this graph represent the connections between various hallways and rooms. In addition, there are special nodes labeled "exit". These exit nodes are the destination of all victims as they would be safe upon reaching the nodes.
+\subsection*{Algorithms}
+\begin{enumerate}
+\item \textbf{A* Search} finds the shortest path from two vertices. It differs from Dijkstra's in that it does not bother calculating vertices farther from the destination. Every iteration tends to bring in vertices that are closer to the destination. \\[5pt]
+\item \textbf{Edmonds Karp} find the maximum amount of flow from a source to a sink (destination). In this context, the algorithm is finding the maximum amount of people that can be evacuated from a source to the exits.\\[5pt]
+\item \textbf{K-Means} is an unsupervised machine learning algorithms that classifies inputs based on some metrics. In this context, the metrics are the proximity from the intruder and the location of each victim. From these metrics, K-Means will generate \textit{clusters} of the danger levels of victims. The higher a danger level of a victim, the more priority the system will give to them.\\[5pt]
+\item \textbf{Quad-Tree} is a tree data structure whose nodes are positions within a display. A node is only present if there is at least one item within a quadrant. In this context, only quadrants that have victims or the intruder and stored, saving memory and allowing for fast collision detection.
+\end{enumerate}
+
 \section*{Phase I}
 The main goals of this phase consist of:
 \begin{enumerate}
@@ -21,31 +35,6 @@ The main goals of this phase consist of:
 \item Read \& Learn Godot \& GDScript and create a project
 \item Load in assets needed for the simulator
 \item Investigate the Algorithms required for the simulation
-	\begin{itemize}
-	\item Collision Detection: 
-		\begin{itemize}
-		\item Spatial Hashing: Using a Hash-Table to map collisions 
-		such that multiple items within a bucket means collision
-		\item Quadtrees: A tree data structure where each root quadrant 			points to 4 inner child quadrants
-		\end{itemize}
-	\item Network Flow:
-		\begin{itemize}
-		\item Edmonds-Karp: Maximum Flow from source to a sink
-		\end{itemize}
-	\item Traversal:
-		\begin{itemize}
-		\item Breadth-First Search
-		\item Depth-First Search
-		\end{itemize}
-	\item Shortest-Path
-		\begin{itemize}
-		\item Dijkstra's: Shortest Path to every vertex
-		\item A* Search: Shortest Path with an emphasis in a direction
-		\end{itemize}
-	\item Machine Learning
-		\begin{itemize}
-		\item K-Means: Classify victims based upon several factors - 				Proximity, and Location
-		\end{itemize}
-	\end{itemize}
 \end{enumerate}
+
 \end{document}
