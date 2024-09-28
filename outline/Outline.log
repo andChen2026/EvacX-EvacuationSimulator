@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.22)  28 SEP 2024 12:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.22)  28 SEP 2024 12:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Outline.tex
-(./Outline.tex
+**outline.tex
+(./outline.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -54,8 +54,8 @@ File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count199
 \l__pdf_internal_box=\box51
 )
-(./Outline.aux)
-\openout1 = `Outline.aux'.
+(./outline.aux)
+\openout1 = `outline.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
@@ -109,23 +109,23 @@ LaTeX Font Info:    ... okay on input line 11.
 [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./Outline.aux)
+(./outline.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 1028 strings out of 474116
- 17529 string characters out of 5743682
- 1927187 words of memory out of 5000000
- 23452 multiletter control sequences out of 15000+600000
- 559885 words of font info for 42 fonts, out of 8000000 for 9000
+ 1027 strings out of 474116
+ 17511 string characters out of 5743682
+ 1928187 words of memory out of 5000000
+ 23451 multiletter control sequences out of 15000+600000
+ 559587 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,5n,65p,499b,119s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,5n,65p,480b,119s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on Outline.pdf (1 page, 28571 bytes).
+Output written on outline.pdf (1 page, 30104 bytes).
 PDF statistics:
  18 PDF objects out of 1000 (max. 8388607)
  10 compressed objects within 1 object stream
