@@ -2,6 +2,7 @@ from pathfinding import optimalPath
 import random
 from building import Person
 
+
 def getIsDead(victim, intruder, building):
     #check if victim made it out of building
     if(victim.position_x > len(building) or victim.position_x < 0 or victim.position_y > len(building[0]) or victim.position_y < 0):

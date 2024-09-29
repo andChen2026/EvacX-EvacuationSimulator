@@ -1,7 +1,6 @@
 from building import Block, Person, Exit
 from Simulation import simulate
 
-
 def distributeVictims(building):
     victims = []
     room_positions = []
@@ -28,7 +27,7 @@ building[0][0] = Block("Room", ["S"])
 building[0][1] = Block("Room", ["S"])
 building[0][2] = Block("Room", ["S"])
 building[1][0] = Block("Hall", ["W"])
-building[1][1] = Block("Hall", [])
+building[1][1] = Block("Hall", []) 
 building[1][2] = Block("Hall", ["E"])
 building[2][0] = Block("Room", ["E"])
 building[2][1] = Block("Hall", ["E", "W"])
