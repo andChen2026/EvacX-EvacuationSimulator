@@ -28,6 +28,7 @@ class Person:
         self.status = "Safe"
 
 class Exit:
-    def __init__(self, position_x, position_y):
+    def __init__(self, position_x, position_y, side):
         self.position_x = position_x
         self.position_y = position_y
+        self.side = side

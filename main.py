@@ -1,6 +1,7 @@
 from building import Block, Person, Exit
 from Simulation import simulate
 
+
 def distributeVictims(building):
     victims = []
     room_positions = []
@@ -16,9 +17,9 @@ def distributeVictims(building):
     for room in room_positions:
         room_x, room_y = room
         for _ in range(total_victims_per_room):
-            if len(victims) < 100:  # Total number of victims
+            if len(victims) < 200:  # Total number of victims
                 victims.append(Person("Victim", room_x, room_y))
-
+    print(len(victims))
     return victims
 # Initialize the building
 rows, cols = 4, 3
@@ -27,14 +28,14 @@ building[0][0] = Block("Room", ["S"])
 building[0][1] = Block("Room", ["S"])
 building[0][2] = Block("Room", ["S"])
 building[1][0] = Block("Hall", ["W"])
-building[1][1] = Block("Hall", []) 
+building[1][1] = Block("Hall", [])
 building[1][2] = Block("Hall", ["E"])
 building[2][0] = Block("Room", ["E"])
 building[2][1] = Block("Hall", ["E", "W"])
 building[2][2] = Block("Room", ["W"])
-building[3][0] = Block("Hall", ["E"])
+building[3][0] = Block("Room", ["E"])
 building[3][1] = Block("Hall", ["S", "E", "W"])
-building[3][2] = Block("Hall", ["W"])
+building[3][2] = Block("Room", ["W"])
 
 # Initialize victims
 victims = distributeVictims(building)
@@ -42,7 +43,7 @@ victims = distributeVictims(building)
 shooter = Person("Shooter", 1, 1)
 
 # Initialize exits
-exits = [Exit(1, 0), Exit(1, 2), Exit(3, 1)]
+exits = [Exit(1, 0,"W"), Exit(1, 2,"E"), Exit(3, 1,"S")]
 
 # Run the simulation
 total_deaths = simulate(building, exits, victims, shooter)

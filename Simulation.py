@@ -2,7 +2,6 @@ from pathfinding import optimalPath
 import random
 from building import Person
 
-
 def getIsDead(victim, intruder, building):
     #check if victim made it out of building
     if(victim.position_x > len(building) or victim.position_x < 0 or victim.position_y > len(building[0]) or victim.position_y < 0):
@@ -22,7 +21,7 @@ def getIsDead(victim, intruder, building):
                 return False
           return True
        else: #intruder is south
-          for i in range(victim.position_y, intruder.positiony):
+          for i in range(victim.position_y, intruder.position_y):
             if(building[intruder.position_x][i].type == "Room"):
                 return False
           return True
@@ -55,6 +54,7 @@ def move_shooter(shooter, building):
 
 def simulate(building, exits, victims, shooter):
     total_deaths = 0
+    total_escape = 0
     turn_limit = 10  # Set a limit to avoid infinite loops
 
     for turn in range(turn_limit):
@@ -63,27 +63,34 @@ def simulate(building, exits, victims, shooter):
         move_shooter(shooter, building)
 
         # Evacuate victims
+        
         for victim in victims:
             if victim.status == "Alive":
                 path_to_exit = optimalPath(victim, building, exits)
                 if path_to_exit:
-                    next_pos = path_to_exit[0]  # Get the next position on the path
-                    if len([v for v in victims if (v.position_x, v.position_y) == next_pos]) < 20:
+                    next_pos = path_to_exit[1]  # Get the next position on the path
+                    if len([v for v in victims if (v.position_x, v.position_y) == next_pos and v.status == "Alive"]) < 20:
                         victim.position_x, victim.position_y = next_pos
-
+            
+        
         # Check for deaths
         dead_victims = checkDeaths(victims, shooter, building)
         total_deaths += len(dead_victims)
         
+        for v in victims:
+            if v.status == "Safe":
+                total_escape +=1
         # Remove dead victims from the list
         victims = [v for v in victims if v.status == "Alive"]
 
         # Print current positions
         for v in victims:
+        
             print(f"{v.type} at ({v.position_x}, {v.position_y})")
         print(f"Shooter at ({shooter.position_x}, {shooter.position_y})")
         print(f"Total deaths so far: {total_deaths}\n")
-        print(f"still alive:  {len(victims)}\n")
+        print(f"Still alive in building:  {len(victims)}\n")
+        print(f"Made it out the building: {total_escape}\n")
 
         # End simulation if all victims are dead or evacuated
         if not victims:
