@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bavryivn4xtlf"]
+
+[ext_resource type="PackedScene" uid="uid://dsmi6hhxrmi66" path="res://room1.tscn" id="1_ry3db"]
+
+[node name="main" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_ry3db")]
