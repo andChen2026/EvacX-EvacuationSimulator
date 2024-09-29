@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsmi6hhxrmi66"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_es2a6"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(1464, 1336)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2302, 1714)
+scale = Vector2(-4281, -3477)
+texture = SubResource("ImageTexture_es2a6")

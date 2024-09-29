@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddk4n1s2c8vs2"]
+
+[ext_resource type="Texture2D" uid="uid://l8stwa54s1s6" path="res://personPNG.png" id="1_xs5cu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2mscg"]
+
+[node name="Node2D" type="CharacterBody2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_xs5cu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_2mscg")

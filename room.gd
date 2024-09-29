@@ -1,0 +1,43 @@
+extends Node2D
+
+
+var blocks: Array[int] = [0,0,0,1,1,1,0,1,0,0,1,0]
+var openings: Array[String] = ["", "", "", "wne", "swne", "wne", "", "we", "", "", "swne", ""]
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	_draw()
+
+
+func _draw() -> void:
+	draw_rect(Rect2(0, 0, 224, 288), Color.DARK_SEA_GREEN)
+	for i in 4:
+		for j in 3:
+			# The room or the hall
+			if blocks[3*i+j] == 0:
+				draw_rect(Rect2(16+64*j, 16+64*i, 64, 64), Color.GRAY)
+			else:
+				draw_rect(Rect2(16+64*j, 16+64*i, 64, 64), Color.WHITE)
+			# The walls
+			if i == 3:
+				draw_line(Vector2(16+64*j, 16), Vector2(16+64*j, 272), Color.BLACK, 4)
+		draw_line(Vector2(16, 16+64*i), Vector2(208, 16+64*i), Color.BLACK, 4)
+	draw_line(Vector2(16, 16), Vector2(208, 16), Color.BLACK, 4)
+	draw_line(Vector2(16, 16), Vector2(16, 272), Color.BLACK, 4)
+	
+	for i in range(4):
+		for j in range(3):
+			if blocks[3*i+j] == 1:
+				if "s" in openings[3*i+j]:
+					draw_line(Vector2(32+64*j, 80+64*i), Vector2(64+64*j, 80+64*i), Color.WHITE, 4)
+				if "n" in openings[3*i+j]:
+					draw_line(Vector2(32+64*j, 16+64*i), Vector2(64+64*j, 16+64*i), Color.WHITE, 4)
+				if "w" in openings[3*i+j]:
+					draw_line(Vector2(16+64*j, 32+64*i), Vector2(16+64*j, 64+64*i), Color.WHITE, 4)
+				if "e" in openings[3*i+j]:
+					draw_line(Vector2(80+64*j, 32+64*i), Vector2(80+64*j, 64+64*i), Color.WHITE, 4)
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsbb4gkyuumja"]
+
+[ext_resource type="Texture2D" uid="uid://l8stwa54s1s6" path="res://personPNG.png" id="1_n3lsm"]
+[ext_resource type="Texture2D" uid="uid://b37kbfwlybmy4" path="res://killedPNG.png" id="2_ob5wa"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2mscg"]
+
+[node name="Node2D" type="CharacterBody2D"]
+
+[node name="Victims" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Victims"]
+position = Vector2(-149, -135)
+scale = Vector2(0.417969, 0.472656)
+texture = ExtResource("1_n3lsm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Victims"]
+shape = SubResource("CapsuleShape2D_2mscg")
+
+[node name="Killer" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Killer"]
+position = Vector2(595, -157)
+scale = Vector2(0.392473, 0.354515)
+texture = ExtResource("2_ob5wa")
