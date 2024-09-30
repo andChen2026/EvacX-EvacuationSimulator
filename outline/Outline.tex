@@ -1,5 +1,5 @@
 \documentclass[12pt]{article}
-\usepackage{geometry}
+\usepackage{geometry, listings}
 \geometry{
  a4paper,
  top=1in,
@@ -62,6 +62,19 @@ Since the project is published under the MIT license, others have the freedom to
 \item The system instructs dangers zones 0 \& 1 to run away; It'll unlock \& locks doors immediately afterwards to increase chances of survival
 \item The system instructs danger zones 2 to hide \& move to safer locations (danger levels 3, 4, and 5)
 \item The system operates until all living victims make it to the nearest exits
-
 \end{enumerate}
+\subsection*{Logic}
+\begin{lstlisting}[language=python]
+def evac_system(building, victims, intruders):
+	paths, model, zones
+	while victims in building: 
+		refine(model)
+		paths = [] * victims
+		zones = kmeans(victims, 5) # classify victims
+		for V in victims: # generate path via BFS
+			paths[V] = BFS((x, y), exit) 
+		for Z in range(zones) and V in class[Z]:
+			move(paths[V], Z)
+	return victims
+\end{lstlisting}
 \end{document}
