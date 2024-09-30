@@ -30,4 +30,22 @@ There are 2 types of blocks:
 \item \textbf{K-Means} is an unsupervised machine learning algorithms that classifies inputs based on some metrics. In this context, the metrics are the proximity from the intruder and the location of each victim. From these metrics, K-Means will generate \textit{clusters} of the danger levels of victims. The higher a danger level of a victim, the more priority the system will give to them.
 \item \textbf{Quad-Tree} is a tree data structure whose nodes are positions within a display. A node is only present if there is at least one item within a quadrant. In this context, only quadrants that have victims or the intruder and stored, saving memory and allowing for fast collision detection.
 \end{enumerate}
+\subsection*{Ethical Problems}
+There were several ethical issues that are present in this project
+\begin{enumerate}
+\item Similar to the trolley problem, if forced, should the system sacrifice a smaller group of people voluntarily to save a larger group or do nothing but take the risk of losing more people overall?
+\item Between two people who are in immediate danger, how should the system choose whom to save? Should it be a toss of a coin or would it be moral to not choose but risk losing both?
+\item For a group of people who are in no immediate danger, should the system bring them into more danger to bring another group out of danger? This may save both but may also cause more losses than if the system were to simply focus on one group.
+\item As an intruder is by no means rational, how should the system make decisions without knowing what the intruder may do?
+\item If a victim distrusts the system and places the safety of others at risk, should the system try to protect them less?
+\end{enumerate}
+Possible solutions to these issues
+\begin{enumerate}
+\item The system should never sacrifice one group over another, as this would lead to distrust among victims. Instead, the system should always try to save the most people in the present moment; Even if it may not be the most mathematically optimal.
+\item A victim's trust is vital to the functioning of a system. Thus, the system will never choose to bring a person into more danger.
+\item A group should never be brought into more danger as once again, the system should not sacrifice safety of any individual or group
+\item This is where machine learning comes in. The system should monitor the intruder and try to form a model based off their actions. While this may be a waste sometimes, in the long run, this will save more victims.
+\item No, as the system should not make moral decisions like this. The system does its best in these situations, but a victim's safety ultimately lies within him/her.
+\end{enumerate}
+Since the project is published under the MIT license, others have the freedom to fork and implement it themselves. But my approach will use the above. (Andrew Y Chen)
 \end{document}
