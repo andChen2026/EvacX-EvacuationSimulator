@@ -77,15 +77,15 @@ class Victim(Person):
 	def _init_(self, name, id, status):
 		super(name, id)
 		self.status = status
-	def listen(): # listen to instructions from system
+	def listen(self): # listen to instructions from system
 		pass
 
 class Intruder(Person):
 	def _init_(self, name, id):
 		super(name, id)
-	def listen(): # listen to sounds of footsteps
+	def listen(self): # listen to sounds of footsteps
 		pass
-	def shoot(): # shoot at a victim
+	def shoot(self, victim): # shoot at a victim
 		pass
 		
 class Building:
