@@ -65,6 +65,10 @@ Since the project is published under the MIT license, others have the freedom to
 \end{enumerate}
 \subsection*{Logic}
 \begin{lstlisting}[language=python]
+def simulation(building, victims, intruders):
+	evac_system(building, victims, intruders)
+	return len(victims)
+	
 def evac_system(building: Room[][], victims: int[], intruders: int[]):
 	paths, model, zones
 	while victims in building: 
