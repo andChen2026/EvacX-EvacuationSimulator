@@ -18,10 +18,10 @@ Members: Diana Lysova, Andrew Chen, Noah Kochavi, Conrad French
 \hspace*{6mm} To achieve this we will be using several graph algorithms as well as levels of optimization to allow the system to run in an efficient and timely manner
 \subsection*{Floor-Plan}
 To represent the floor-plan of the establishment we were running the simulation in, we decided on a 2D matrix consisting of equal blocks.\\[5pt]
-There are 2 types of blocks:
+There are 2 types of blocks with danger levels:
 \begin{itemize}
-\item Room: Requires doors to enter/exit
-\item Hall: Does not require doors to enter/exit; Only needs door 	  to access adjacent rooms
+\item Room: Requires doors to enter/exit; Safest
+\item Hall: Does not require doors to enter/exit; Only needs door 	  to access adjacent rooms; Least safe
 \end{itemize}
 \subsection*{Algorithms}
 \begin{enumerate}
@@ -48,4 +48,20 @@ Possible solutions to these issues
 \item No, as the system should not make moral decisions like this. The system does its best in these situations, but a victim's safety ultimately lies within him/her.
 \end{enumerate}
 Since the project is published under the MIT license, others have the freedom to fork and implement it themselves. But my approach will use the above. (Andrew Y Chen)
+\subsection*{Implementation}
+\begin{enumerate}
+\item The program draws the floor-plan as a 2D matrix
+\item Victims are randomly distributed in classrooms \& hallways
+\item An intruder is introduced in a random classroom or hallway
+\item The simulation starts; all algorithms are executed and run until the end
+\item The system operates by sending real-time ens notifications to all victims
+\item The system classifies victims into danger zones based on their proximity and location within their building (K-Means)
+\item The system starts to build a model of the intruder (Library)
+\item The system locks all doors adjacent to the intruder
+\item The system notifies danger zones 4 \& 5 to proceed to the nearest exits (BFS \& Edmonds-Karp for maximum rate of evacuation)
+\item The system instructs dangers zones 0 \& 1 to run away; It'll unlock \& locks doors immediately afterwards to increase chances of survival
+\item The system instructs danger zones 2 to hide \& move to safer locations (danger levels 3, 4, and 5)
+\item The system operates until all living victims make it to the nearest exits
+
+\end{enumerate}
 \end{document}
