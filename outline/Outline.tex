@@ -62,8 +62,8 @@ Since the project is published under the MIT license, others have the freedom to
 \item The system classifies victims into danger zones based on their proximity and location within their building (K-Means)
 \item The system starts to build a model of the intruder (Library)
 \item The system locks all doors adjacent to the intruder
-\item The system notifies danger zones 4 \& 5 to proceed to the nearest exits (BFS \& Edmonds-Karp for maximum rate of evacuation)
-\item The system instructs dangers zones 0 \& 1 to run away; It'll unlock \& locks doors immediately afterwards to increase chances of survival
+\item The system notifies danger zones 4 \& 5 to proceed to the nearest exits (BFS to find path to exit \& Edmonds-Karp for maximum rate of evacuation to exit)
+\item The system instructs dangers zones 0 \& 1 to run away; It'll unlock \& lock doors immediately to assist in evacuation
 \item The system instructs danger zones 2 to hide \& move to safer locations (danger levels 3, 4, and 5)
 \item The system operates until all living victims make it to the nearest exits
 \end{enumerate}
