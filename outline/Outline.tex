@@ -65,7 +65,7 @@ Since the project is published under the MIT license, others have the freedom to
 \end{enumerate}
 \subsection*{Logic}
 \begin{lstlisting}[language=python]
-def evac_system(building, victims, intruders):
+def evac_system(building: Room[][], victims: int[], intruders: int[]):
 	paths, model, zones
 	while victims in building: 
 		refine(model)
@@ -74,7 +74,15 @@ def evac_system(building, victims, intruders):
 		for V in victims: # generate path via BFS
 			paths[V] = BFS((x, y), exit) 
 		for Z in range(zones) and V in class[Z]:
-			move(paths[V], Z)
-	return victims
+			move(paths[V], exit)
+
+def move((x, y): Position, (x, y): Exit) -> move:
+
+
+def BFS((x, y): Start, (x, y): End) -> moves[]:
+
+
+def KMeans(victims: [], K: int) -> zones[]:
+
 \end{lstlisting}
 \end{document}
