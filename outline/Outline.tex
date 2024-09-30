@@ -28,7 +28,11 @@ There are 2 types of blocks with danger levels:
 \item \textbf{Breadth-First Search} finds the shortest path from two vertices in an unweighted graph or 2D matrix
 \item \textbf{Edmonds Karp} find the maximum amount of flow from a source to a sink (destination). In this context, the algorithm is finding the maximum amount of people that can be evacuated from a source to the exits.
 \item \textbf{K-Means} is an unsupervised machine learning algorithms that classifies inputs based on some metrics. In this context, the metrics are the proximity from the intruder and the location of each victim. From these metrics, K-Means will generate \textit{clusters} of the danger levels of victims. The higher a danger level of a victim, the more priority the system will give to them.
+\end{enumerate}
+\subsection*{Data Structures}
+\begin{enumerate}
 \item \textbf{Quad-Tree} is a tree data structure whose nodes are positions within a display. A node is only present if there is at least one item within a quadrant. In this context, only quadrants that have victims or the intruder and stored, saving memory and allowing for fast collision detection.
+\item \textbf{Union-Find} is a tree data structure whose nodes represent positions within a building. Lookups - is one hallway connected to another - are very fast, O(LogN)
 \end{enumerate}
 \subsection*{Ethical Problems}
 There were several ethical issues that are present in this project
