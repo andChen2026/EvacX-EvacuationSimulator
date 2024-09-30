@@ -101,14 +101,16 @@ class Room(Block):
 	def _init_(self, cap, cur, doors):
 		super(cap, cur)
 		self.doors = doors
-		self.soundlevel = 5 # Quiet
+		self.soundlevel = 0 
+		self.soundFactor = 3
 		
 class Hall(Block):
 	def _init_(self, cap, cur, doors):
 		super(cap, cur)
 		self.doors = doors
-		self.soundlevel = 10 # Very loud
-	
+		self.soundlevel = 0 
+		self.soundFactor = 7
+		
 # Algorithms
 def simulation(building, victims, intruders):
 	evac_system(building, victims, intruders)
