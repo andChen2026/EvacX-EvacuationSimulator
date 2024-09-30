@@ -65,6 +65,51 @@ Since the project is published under the MIT license, others have the freedom to
 \end{enumerate}
 \subsection*{Pseudocode Logic}
 \begin{lstlisting}[language=python]
+# Classes
+class Person:
+	def _init_(self, name, id):
+		self.name
+		self.id = id
+	def move(self, (x, y), (x, y)):
+		pass
+		
+class Victim(Person):
+	def _init_(self, name, id, status):
+		super(name, id)
+		self.status = status
+	def listen(): # listen to instructions from system
+		pass
+
+class Intruder(Person):
+	def _init_(self, name, id):
+		super(self, name, id)
+	def listen(): # listen to sounds of footsteps
+		pass
+	def shoot(): # shoot at a victim
+		pass
+		
+class Building:
+	def _init_(self, filename):
+		self.layout = load(filename) #2D matrix of Blocks
+		
+class Block:
+	def _init(self, cap, cur):
+		self.capacity = cap
+		self.current = cur
+		
+class Room(Block):
+	def _init_(self, cap, cur, doors, sound):
+		super(cap, cur)
+		self.doors = doors
+		self.slevel = sound
+		
+class Hall(Block):
+	def _init_(self, cap, cur, doors, sound):
+		super(cap, cur)
+		self.doors = doors
+		self.slevel = sound
+	
+# Algorithms
 def simulation(building, victims, intruders):
 	evac_system(building, victims, intruders)
 	return len(victims)
