@@ -73,7 +73,7 @@ def evac_system(building: Room[][], victims: int[], intruders: int[]):
 		zones = kmeans(victims, 5) # classify victims
 		for V in victims: # generate path via BFS
 			paths[V] = BFS((x, y), exit) 
-		for Z in range(zones) and V in class[Z]:
+		for Z in range(zones) and V in zones[Z]:
 			move(paths[V], exit)
 
 def move((x, y): Position, (x, y): Exit) -> move:
