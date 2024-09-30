@@ -63,19 +63,19 @@ Since the project is published under the MIT license, others have the freedom to
 \item The system instructs danger zones 2 to hide \& move to safer locations (danger levels 3, 4, and 5)
 \item The system operates until all living victims make it to the nearest exits
 \end{enumerate}
-\subsection*{Logic}
+\subsection*{Pseudocode Logic}
 \begin{lstlisting}[language=python]
 def simulation(building, victims, intruders):
 	evac_system(building, victims, intruders)
 	return len(victims)
 	
 def evac_system(building: Room[][], victims: int[], intruders: int[]):
-	paths, model, zones
-	while victims in building: 
+	paths, model, zones, alive, dead
+	while alive in building: 
 		refine(model)
-		paths = [] * victims
-		zones = kmeans(victims, 5) # classify victims
-		for V in victims: # generate path via BFS
+		paths = [] * alive
+		zones = kmeans(alive, 5) # classify victims
+		for V in alive: # generate path via BFS
 			paths[V] = BFS((x, y), exit) 
 		for Z in range(zones) and V in zones[Z]:
 			move(paths[V], exit)
@@ -86,7 +86,10 @@ def move((x, y): Position, (x, y): Exit) -> move:
 def BFS((x, y): Start, (x, y): End) -> moves[]:
 
 
-def KMeans(victims: [], K: int) -> zones[]:
+def kmeans(alive: [], K: int) -> zones[]:
+
+def kill(victim):
+	victim.status = dead # victim can be alive or dead
 
 \end{lstlisting}
 \end{document}
